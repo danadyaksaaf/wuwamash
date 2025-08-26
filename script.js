@@ -8,6 +8,10 @@ const leftButton = document.getElementById('choice1')
 const MiddleButton = document.getElementById('choice2')
 const RightButton = document.getElementById('choice3')
 
+// GATHER SOME HEADERS
+const subTitle = document.getElementById('subtitle')
+const mainTitle = document.getElementById('main-title')
+
 // TOP #1 CHOICE CONTAINER
 var topImg = document.getElementById('topPics')
 
@@ -57,10 +61,14 @@ function buttonAction1() {
     pics3.src = pictures[picsdice3]
     topImg.src = pics.src;
     counter++;
+
+
     if (counter === 8) {
         leftButton.remove()
         RightButton.remove()
         MiddleButton.remove()
+        subTitle.remove()
+        mainTitle.remove()
     }
 }
 
@@ -72,10 +80,13 @@ function buttonAction2() {
     topImg.src = pics2.src;
     counter++;
 
+
     if (counter === 8) {
         leftButton.remove()
         RightButton.remove()
         MiddleButton.remove()
+        subTitle.remove()
+        mainTitle.remove()
     }
 }
 
@@ -87,9 +98,13 @@ function buttonAction3() {
     topImg.src = pics3.src;
     counter++;
 
+
     if (counter === 8) {
         leftButton.remove()
         RightButton.remove()
         MiddleButton.remove()
+        subTitle.remove()
+        mainTitle.remove()
     }
+
 }
