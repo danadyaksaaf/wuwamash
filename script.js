@@ -42,7 +42,7 @@ const pictures = new Array(
     './images/0016.webp',
     './images/0017.webp',
     './images/0018.webp',
-    //'./images/0019.webp',
+    './images/0019.webp',
 
 )
 
