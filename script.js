@@ -15,8 +15,13 @@ const mainTitle = document.getElementById('main-title')
 // TOP #1 CHOICE CONTAINER
 var topImg = document.getElementById('topPics')
 
-// LOOP COUNTER UNTIL 8 ROUNDS
-let counter = 0;
+// LOOP ROUNDS UNTIL 8 ROUNDS
+let round = 0
+
+//RANK GIRLS EACH 3 CHOICES
+let firstGirlChoice = 0
+let secondGirlChoice = 0
+let thirdGirlChoice = 0
 
 const pictures = new Array(
     './images/0001.webp',
@@ -52,18 +57,22 @@ window.onload = function () {
     pics3.src = pictures[picsdice3]
 }
 
-// BUTTONS THAT TRIGGERS RANDOM IMAGES AND COUNTER TO STOP
+// BUTTONS THAT TRIGGERS RANDOM IMAGES AND round TO STOP
 
 function buttonAction1() {
     const picsdice2 = Math.floor(Math.random() * pictures.length)
     const picsdice3 = Math.floor(Math.random() * pictures.length)
     pics2.src = pictures[picsdice2]
     pics3.src = pictures[picsdice3]
-    topImg.src = pics.src;
-    counter++;
 
+    firstGirlChoice++
+    round++
 
-    if (counter === 8) {
+    if (firstGirlChoice === 3) {
+        topImg.src = pics.src
+    }
+
+    if (round === 8) {
         leftButton.remove()
         RightButton.remove()
         MiddleButton.remove()
@@ -77,11 +86,15 @@ function buttonAction2() {
     const picsdice3 = Math.floor(Math.random() * pictures.length)
     pics.src = pictures[picsdice]
     pics3.src = pictures[picsdice3]
-    topImg.src = pics2.src;
-    counter++;
 
+    secondGirlChoice++;
+    round++
 
-    if (counter === 8) {
+    if (secondGirlChoice === 3) {
+        topImg.src = pics2.src
+    }
+
+    if (round === 8) {
         leftButton.remove()
         RightButton.remove()
         MiddleButton.remove()
@@ -95,16 +108,22 @@ function buttonAction3() {
     const picsdice = Math.floor(Math.random() * pictures.length)
     pics2.src = pictures[picsdice2]
     pics.src = pictures[picsdice]
-    topImg.src = pics3.src;
-    counter++;
 
+    thirdGirlChoice++;
+    round++;
 
-    if (counter === 8) {
+    if (thirdGirlChoice === 3) {
+        topImg.src = pics3.src
+    }
+
+    if (round === 8) {
         leftButton.remove()
         RightButton.remove()
         MiddleButton.remove()
         subTitle.remove()
         mainTitle.remove()
     }
+
+
 
 }
