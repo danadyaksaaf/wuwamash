@@ -43,18 +43,18 @@
         const src = filename ? `../images/${filename}` : (rawPath || '')
 
         // lookup name: try exact rawPath, normalized variants, then filename map
-        let name = 'Unknown'
-        if (typeof girlsData !== 'undefined' && girlsData) {
-            if (girlsData[rawPath]) {
-                name = girlsData[rawPath]
-            } else if (girlsData[`../${rawPath}`]) {
-                name = girlsData[`../${rawPath}`]
-            } else if (girlsData[`../images/${filename}`]) {
-                name = girlsData[`../images/${filename}`]
-            } else if (nameByFilename[filename]) {
-                name = nameByFilename[filename]
-            }
-        }
+        // let name = 'Unknown'
+        // if (typeof girlsData !== 'undefined' && girlsData) {
+        //     if (girlsData[rawPath]) {
+        //         name = girlsData[rawPath]
+        //     } else if (girlsData[`../${rawPath}`]) {
+        //         name = girlsData[`../${rawPath}`]
+        //     } else if (girlsData[`../images/${filename}`]) {
+        //         name = girlsData[`../images/${filename}`]
+        //     } else if (nameByFilename[filename]) {
+        //         name = nameByFilename[filename]
+        //     }
+        // }
 
         const div = document.createElement('div')
         div.className = 'item'
